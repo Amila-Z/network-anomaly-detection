@@ -1,0 +1,20 @@
+# Dataset files (too large for GitHub)
+*.csv
+UNSW_NB15_*.csv
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environments
+venv/
+env/
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
