@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Network Traffic Anomaly Detection System - UNSW-NB15 Dataset Version
+Network Traffic Anomaly Detection System - UNSW-NB15 Dataset
 This program detects suspicious network traffic patterns using real attack data
 """
 
@@ -33,7 +33,7 @@ try:
     print(f"    Features: {len(df.columns)}")
     print()
     
-    # Display first few column names to understand structure
+    # Display first few column names to understand the structur
     print("[*] Dataset columns available:")
     print(f"    {', '.join(df.columns[:10].tolist())}...")
     print()
@@ -47,11 +47,11 @@ except Exception as e:
     print(f"[!] ERROR loading dataset: {e}")
     exit(1)
 
-# Data preprocessing
+# Data preprocesing
 print("[*] Preprocessing data...")
 
 # For analysis, let's use a sample if dataset is very large (for faster processing)
-# You can increase this number or remove sampling for full analysis
+# we can increase this number or remove sampling for full analysis
 SAMPLE_SIZE = 50000  # Using 50K records for reasonable processing time
 if len(df) > SAMPLE_SIZE:
     print(f"[*] Sampling {SAMPLE_SIZE:,} records for analysis (from {len(df):,} total)")
@@ -197,7 +197,7 @@ print(f"    Sample features: {', '.join(features[:8])}...")
 # Prepare data for ML
 X = traffic_data[features].copy()
 
-# Handle missing values and infinite values
+# Handle mising values and infinite values
 X = X.replace([np.inf, -np.inf], np.nan)
 X = X.fillna(X.median())
 
